@@ -1,487 +1,481 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" dir="ltr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./assets/css/tailwind-ecommerce.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#207891" />
-  <meta name="msapplication-TileColor" content="#ffc40d" />
-  <meta name="theme-color" content="#ffffff" />
-  <title>About Us</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <title>About</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+  <script src="js/OverlayScrollbars.min.js"></script>
+
+
+  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/hamburgers.min.css" rel="stylesheet">
+  <link href="css/loaders.min.css" rel="stylesheet">
+  <link href="css/theme.min.css" rel="stylesheet">
+  <link href="css/user.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
-<body x-data="{ desktopMenuOpen: false, mobileMenuOpen: false}">
-  <main class="flex flex-col justify-between h-screen">
-    <div>
-      <!-- Header -->
-      <header class="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 text-black">
-        <a href="./index.html" class="flex items-center justify-center h-screen">
-          <span class="text-5xl font-bold text-teal-600 drop-shadow-md">
-            Ali
-          </span>
-          <span class="pt-1 text-3xl font-light tracking-wide text-gray-700 uppercase">
-            Commerce
-          </span>
-
-          <!-- <img
-                class="cursor-pointer sm:h-auto sm:w-auto"
-                src="./assets/images/company-logo.svg"
-                alt="company logo"
-              /> -->
-        </a>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button @click="mobileMenuOpen = !mobileMenuOpen" class="hover:text-teal-500">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor" class="w-8 h-8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
+<body>
+  <div class="py-3 text-white bg-primary d-none d-sm-block fw-bold">
+    <div class="container">
+      <div class="row align-items-center gx-4">
+        <div class="col-auto d-none d-lg-block fs--1"><span class="fas fa-map-marker-alt text-warning me-2"
+            data-fa-transform="grow-3"></span>House #44, University Town, Peshawar, KPK, 25000 </div>
+        <div class="col-auto ms-md-auto order-md-2 d-none d-sm-flex fs--1 align-items-center"><span
+            class="fas fa-clock text-warning me-2" data-fa-transform="grow-3"></span>Mon-Sat, 8.00-18.00. Sunday CLOSED
         </div>
+        <div class="col-auto"><span class="fas fa-phone-alt text-warning" data-fa-transform="shrink-3"></span><a
+            class="text-white ms-2 fs--1 d-inline fw-bold" href="tel:2123865575">213 386 5545, 214 346 5576</a></div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Search Bar -->
-        <form class="items-center hidden w-2/5 overflow-hidden text-gray-700 bg-white rounded-lg shadow-md md:flex">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-5 h-5 mx-3">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-          </svg>
-          <input class="w-full px-3 py-2 outline-none" type="search" placeholder="Search" />
-          <button class="px-4 py-2 font-bold text-white bg-teal-600 hover:bg-teal-300">
-            Search
-          </button>
-        </form>
-
-        <!-- Icons -->
-        <div class="items-center hidden gap-4 md:flex">
-          <a href="./wishlist.html" class="flex flex-col items-center hover:text-teal-500">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5C14.377 3.75 12.715 4.876 12 6.483 11.285 4.876 9.623 3.75 7.687 3.75 5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-            </svg>
-            <p class="text-xs">Wishlist</p>
-          </a>
-
-          <a href="./cart.html" class="flex flex-col items-center hover:text-teal-500">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path fill-rule="evenodd"
-                d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
-                clip-rule="evenodd" />
-            </svg>
-            <p class="text-xs">Cart</p>
-          </a>
-
-          <a href="./account-page.html" class="relative flex flex-col items-center hover:text-teal-500">
-            <span class="absolute bottom-[33px] right-1 flex h-2 w-2">
-              <span class="absolute inline-flex w-full h-full bg-red-400 rounded-full opacity-75 animate-ping"></span>
-              <span class="relative inline-flex w-2 h-2 bg-red-500 rounded-full"></span>
+  <div class="sticky-top navbar-elixir">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><img src="images/logo-dark.png" alt="logo"></a>
+        <button class="p-0 navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#primaryNavbarCollapse" aria-controls="primaryNavbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="hamburger hamburger--emphatic">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
             </span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-            </svg>
-            <p class="text-xs">Account</p>
-          </a>
-        </div>
-      </header>
-      <!-- /Header -->
-
-      <!-- Burger menu  -->
-      <section x-show="mobileMenuOpen" @click.outside="mobileMenuOpen = false"
-        class="absolute left-0 right-0 z-50 w-full h-screen bg-white" style="display: none">
-        <div class="mx-auto">
-          <div class="flex justify-center w-full gap-3 py-4 mx-auto">
-            <a href="./wishlist.html" class="flex flex-col items-center justify-center cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-              </svg>
-
-              <p class="text-xs">Wishlist</p>
-            </a>
-
-            <a href="./cart.html" class="flex flex-col items-center justify-center cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path fill-rule="evenodd"
-                  d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 004.25 22.5h15.5a1.875 1.875 0 001.865-2.071l-1.263-12a1.875 1.875 0 00-1.865-1.679H16.5V6a4.5 4.5 0 10-9 0zM12 3a3 3 0 00-3 3v.75h6V6a3 3 0 00-3-3zm-3 8.25a3 3 0 106 0v-.75a.75.75 0 011.5 0v.75a4.5 4.5 0 11-9 0v-.75a.75.75 0 011.5 0v.75z"
-                  clip-rule="evenodd" />
-              </svg>
-
-              <p class="text-xs">Cart</p>
-            </a>
-
-            <a href="./account-page.html" class="relative flex flex-col items-center justify-center cursor-pointer">
-              <span class="absolute bottom-[33px] right-1 flex h-2 w-2">
-                <span class="absolute inline-flex w-full h-full bg-red-400 rounded-full opacity-75 animate-ping"></span>
-                <span class="relative inline-flex w-2 h-2 bg-red-500 rounded-full"></span>
-              </span>
-
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
-
-              <p class="text-xs">Account</p>
-            </a>
-          </div>
-
-          <form class="flex items-center mx-5 my-4 border h-9">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-4 h-4 mx-3">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-
-            <input class="hidden w-11/12 outline-none md:block" type="search" placeholder="Search" />
-
-            <button type="submit" class="h-full px-4 ml-auto bg-amber-400 hover:bg-yellow-300">
-              Search
-            </button>
-          </form>
-          <ul class="font-medium text-center">
-            <li class="py-2"><a href="./index.html">Home</a></li>
-            <li class="py-2"><a href="./catalog.html">catalog</a></li>
-            <li class="py-2"><a href="./about-us.html">About Us</a></li>
-            <li class="py-2"><a href="./contact-us.html">Contact Us</a></li>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="primaryNavbarCollapse">
+          <ul class="py-3 mt-1 mb-2 navbar-nav py-lg-0 my-lg-0 ms-lg-n1">
+            <li><a class="nav-link" href="./index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./about-us.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
           </ul>
-        </div>
-      </section>
-      <!-- /Burger menu  -->
-
-      <!-- Nav bar -->
-      <!-- hidden on small devices -->
-      <nav class="relative bg-teal-600 shadow-lg">
-        <div class="mx-auto hidden h-14 w-full max-w-[1200px] items-center md:flex px-6">
-          <!-- Categories Button -->
-          <button @click="desktopMenuOpen = !desktopMenuOpen"
-            class="flex items-center justify-center w-48 py-3 duration-200 rounded-md shadow-md mr-14 bg-gradient-to-r from-teal-400 to-teal-200 hover:shadow-lg">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <span class="text-lg font-semibold text-gray-800">All Categories</span>
-            </div>
-          </button>
-
-          <!-- Navigation Links -->
-          <div class="flex gap-8">
-            <a class="text-base font-semibold text-white transition duration-200 hover:text-yellow-400 hover:underline"
-              href="./index.html">
-              Home
-            </a>
-            <a class="text-base font-semibold text-white transition duration-200 hover:text-yellow-400 hover:underline"
-              href="./catalog.html">
-              catalog
-            </a>
-            <a class="text-base font-semibold text-white transition duration-200 hover:text-yellow-400 hover:underline"
-              href="./about-us.html">
-              About Us
-            </a>
-            <a class="text-base font-semibold text-white transition duration-200 hover:text-yellow-400 hover:underline"
-              href="./contact-us.html">
-              Contact Us
-            </a>
-          </div>
-
-          <!-- Login/Signup Links -->
-          <div class="flex items-center gap-6 ml-auto">
-            <a class="text-base font-semibold text-white transition duration-200 hover:text-yellow-400 hover:underline"
-              href="./login.html">
-              Login
-            </a>
-            <span class="text-white">|</span>
-            <a class="text-base font-semibold text-white transition duration-200 hover:text-yellow-400 hover:underline"
-              href="./sign-up.html">
-              Sign Up
-            </a>
-          </div>
+          <a class="my-3 border-2 btn btn-outline-primary rounded-pill btn-sm d-block d-lg-inline-block ms-auto my-lg-0"
+            href="#">Explore</a>
         </div>
       </nav>
-      <!-- Menu  -->
-      <section x-show="desktopMenuOpen" @click.outside="desktopMenuOpen = false"
-        class="absolute left-0 right-0 z-10 w-full bg-white border-b border-l border-r" style="display: none">
-        <div class="mx-auto flex max-w-[1200px] py-10">
-          <div class="w-[300px] border-r">
-            <ul class="px-5">
-              <li class="flex items-center gap-2 px-3 py-2 active:blue-900 bg-amber-400 active:bg-amber-400">
-                <img width="15px" height="15px" src="./assets/images/bed.svg" alt="Bedroom icon" />
-                Bedroom
-                <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
-                </span>
-              </li>
 
-              <li class="flex items-center gap-2 px-3 py-2 active:blue-900 hover:bg-neutral-100 active:bg-amber-400">
-                <img width="15px" height="15px" src="./assets/images/sleep.svg" alt="bedroom icon" />
-                Matrass
-                <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
-                </span>
-              </li>
+    </div>
+  </div>
+  <!-- ===============================================-->
 
-              <li class="flex items-center gap-2 px-3 py-2 active:blue-900 hover:bg-neutral-100 active:bg-amber-400">
-                <img width="15px" height="15px" src="./assets/images/outdoor.svg" alt="bedroom icon" />
-                Outdoor
-                <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
-                </span>
-              </li>
-
-              <li class="flex items-center gap-2 px-3 py-2 active:blue-900 hover:bg-neutral-100 active:bg-amber-400">
-                <img width="15px" height="15px" src="./assets/images/sofa.svg" alt="bedroom icon" />
-                Sofa
-                <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
-                </span>
-              </li>
-
-              <li class="flex items-center gap-2 px-3 py-2 active:blue-900 hover:bg-neutral-100 active:bg-amber-400">
-                <img width="15px" height="15px" src="./assets/images/kitchen.svg" alt="bedroom icon" />
-                Kitchen
-                <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
-                </span>
-              </li>
-
-              <li class="flex items-center gap-2 px-3 py-2 active:blue-900 hover:bg-neutral-100 active:bg-amber-400">
-                <img width="15px" height="15px" src="./assets/images/food.svg" alt="Food icon" />
-                Living room
-                <span class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                  </svg>
-                </span>
-              </li>
-            </ul>
+  <section>
+    <div class="bg-holder overlay"
+      style="background-image:url(./images/background-2.jpg);background-position:center bottom;"></div>
+    <!--/.bg-holder-->
+    <div class="container">
+      <div class="pt-6 row" data-inertia="{&quot;weight&quot;:1.5}" style="transform: translate(0px, 43.369px);">
+        <div class="text-white col-md-8" data-zanim-timeline="{}">
+          <div class="overflow-hidden">
+            <h1 class="mb-0 text-white fs-4 fs-md-5 lh-1" data-zanim-xs="{&quot;delay&quot;:0}"
+              style="transform: translate(0px, 0px); opacity: 1;">About</h1>
+            <div class="nav" aria-label="breadcrumb" role="navigation" data-zanim-xs="{&quot;delay&quot;:0.1}"
+              style="transform: translate(0px, 0px); opacity: 1;">
+              <ol class="breadcrumb fs-1 ps-0 fw-bold">
+                <li class="breadcrumb-item"><a class="text-white" href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About</li>
+              </ol>
+            </div>
           </div>
+        </div>
+      </div>
+    </div><!-- end of .container-->
+  </section>
 
-          <div class="flex justify-between w-full">
-            <div class="flex gap-6">
-              <div class="mx-5">
-                <p class="font-medium text-gray-500">BEDS</p>
-                <ul class="text-sm leading-8">
-                  <li><a href="./product-overview.html">Italian bed</a></li>
-                  <li><a href="./product-overview.html">Queen-size bed</a></li>
-                  <li><a href="./product-overview.html">Wooden craft bed</a></li>
-                  <li><a href="./product-overview.html">King-size bed</a></li>
-                </ul>
+
+
+
+  <main class="main" id="top">
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="bg-100">
+      <div class="container">
+        <div class="row g-0">
+          <div class="py-3 col-lg-4 py-lg-0 position-relative" style="min-height:400px; background-position: top">
+            <div class="bg-holder rounded-ts-lg rounded-lg-bs-lg rounded-te-lg rounded-lg-te-0"
+              style="background-image:url(./images/ceo.jpg);"></div>
+            <!--/.bg-holder-->
+          </div>
+          <div
+            class="px-5 py-6 bg-white col-lg-8 my-lg-0 rounded-lg-te-lg rounded-be-lg rounded-bs-lg rounded-lg-bs-0 d-flex align-items-center">
+            <div data-zanim-timeline="{}">
+              <h5 data-zanim-xs="{&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">Message From
+                CEO</h5>
+              <p class="my-4" data-zanim-xs="{&quot;delay&quot;:0.1}"
+                style="transform: translate(0px, 0px); opacity: 1;">
+                Elixir co-operates with clients in solving the hardest problems they face in their businesses—and the
+                world. We do this by channeling the diversity of our people and their thinking. </p><img
+                data-zanim-xs="{&quot;delay&quot;:0.2}" src="./images/signature.png" alt="CEO"
+                style="transform: translate(0px, 0px); opacity: 1;">
+              <h5 class="mt-3 mb-1 text-uppercase fw-medium" data-zanim-xs="{&quot;delay&quot;:0.3}"
+                style="transform: translate(0px, 0px); opacity: 1;">renal scott</h5>
+              <h6 class="text-500 fw-semi-bold" data-zanim-xs="{&quot;delay&quot;:0.4}"
+                style="transform: translate(0px, 0px); opacity: 1;">UK office</h6>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 row">
+          <div class="col">
+            <h3 class="text-center fs-2 fs-md-3">Company Overview</h3>
+            <hr class="short"
+              data-zanim-xs="{&quot;from&quot;:{&quot;opacity&quot;:0,&quot;width&quot;:0},&quot;to&quot;:{&quot;opacity&quot;:1,&quot;width&quot;:&quot;4.20873rem&quot;},&quot;duration&quot;:0.8}"
+              style="width: 4.2087rem; opacity: 1;">
+          </div>
+          <div class="col-12">
+            <div class="px-0 px-3 py-5 mt-6 bg-white px-lg-5 rounded-3">
+              <h5>Earning the right</h5>
+              <p class="mt-3">As a first order business consulting firm, we help companies, foundations and individuals
+                make a difference. Our work gets to the heart of the matter. We break silos because it takes more than
+                any
+                one check or policy or letter to tackle big issues like economic security, human rights or climate
+                sustainability. We prescribe a custom formula of advocacy, collaboration, investment, philanthropy,
+                policy
+                and new ways of doing business in order to help you make progress.</p>
+              <blockquote class="my-5 blockquote ms-lg-6" style="max-width: 700px;">
+                <h5 class="mb-0 fw-medium ms-3">But how do we do it? We like to call it earning the right, walking the
+                  talk and playing the game …</h5>
+              </blockquote>
+              <p class="column-lg-2 dropcap">Elixir serves to help people with creative ideas succeed. Our platform
+                empowers millions of people — from individuals and local artists to entrepreneurs shaping the world’s
+                most
+                iconic businesses — to share their stories and create an impactful, stylish, and easy-to-manage online
+                presence. The Cambridge office is the home of the Risk management practice. We work to assure the safe
+                performance of complex critical systems; develop safety leadership and culture; manage safety and risk
+                in
+                high-hazard industries; understand complex project risks, measure and report risk performance. We work
+                across a wide range of industries and public sector organizations that include upstream and downstream
+                oil
+                and gas; rail and road transportation; construction; and gas utilities and distribution. We work
+                worldwide
+                in Europe, Middle East and Asia, Africa and South America based out of our offices in Cambridge, UK and
+                Milan, Italy.</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- end of .container-->
+    </section><!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section>
+      <div class="bg-holder overlay overlay-elixir" style="background-image:url(./images/background-15.jpg);">
+      </div>
+      <!--/.bg-holder-->
+      <div class="container">
+        <div class="d-flex"><span class="me-3"> <img src="./images/checkmark.png" alt="checkmark"
+              style="width: 55px"></span>
+          <div class="flex-1">
+            <h2 class="text-warning fs-3 fs-lg-4">Take the right step,<br><span class="text-white">do the big
+                things.</span></h2>
+            <div class="mt-4 row pe-lg-10">
+              <div class="overflow-hidden col-md-3" data-zanim-timeline="{}">
+                <div class="mt-3 mb-0 text-white fs-3 fs-lg-4 fw-bold mt-lg-5 lh-xs"
+                  data-zanim-xs="{&quot;delay&quot;:0.1}" data-countup="{&quot;endValue&quot;:52}"
+                  style="transform: translate(0px, 0px); opacity: 1;">52</div>
+                <h6 class="text-white fs-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                  style="transform: translate(0px, 0px); opacity: 1;">Cases Solved</h6>
               </div>
-
-              <div class="mx-5">
-                <p class="font-medium text-gray-500">LAMPS</p>
-                <ul class="text-sm leading-8">
-                  <li><a href="./product-overview.html">Italian Purple Lamp</a></li>
-                  <li><a href="./product-overview.html">APEX Lamp</a></li>
-                  <li><a href="./product-overview.html">PIXAR lamp</a></li>
-                  <li><a href="./product-overview.html">Ambient Nightlamp</a></li>
-                </ul>
+              <div class="overflow-hidden col col-lg-3" data-zanim-timeline="{}">
+                <div class="mt-3 mb-0 text-white fs-3 fs-lg-4 fw-bold mt-lg-5 lh-xs"
+                  data-zanim-xs="{&quot;delay&quot;:0.1}" data-countup="{&quot;endValue&quot;:164}"
+                  style="transform: translate(0px, 0px); opacity: 1;">164</div>
+                <h6 class="text-white fs-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                  style="transform: translate(0px, 0px); opacity: 1;">Trained Experts</h6>
               </div>
-
-              <div class="mx-5">
-                <p class="font-medium text-gray-500">BEDSIDE TABLES</p>
-                <ul class="text-sm leading-8">
-                  <li><a href="./product-overview.html">Purple Table</a></li>
-                  <li><a href="./product-overview.html">Easy Bedside</a></li>
-                  <li><a href="./product-overview.html">Soft Table</a></li>
-                  <li><a href="./product-overview.html">Craft Table</a></li>
-                </ul>
+              <div class="w-100 d-flex d-lg-none"></div>
+              <div class="overflow-hidden col-md-3" data-zanim-timeline="{}">
+                <div class="mt-3 mb-0 text-white fs-3 fs-lg-4 fw-bold mt-lg-5 lh-xs"
+                  data-zanim-xs="{&quot;delay&quot;:0.1}" data-countup="{&quot;endValue&quot;:38}"
+                  style="transform: translate(0px, 0px); opacity: 1;">38</div>
+                <h6 class="text-white fs-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                  style="transform: translate(0px, 0px); opacity: 1;">Branches</h6>
               </div>
-
-              <div class="mx-5">
-                <p class="font-medium text-gray-500">SPECIAL</p>
-                <ul class="text-sm leading-8">
-                  <li><a href="./product-overview.html">Humidifier</a></li>
-                  <li><a href="./product-overview.html">Bed Cleaner</a></li>
-                  <li><a href="./product-overview.html">Vacuum Cleaner</a></li>
-                  <li><a href="./product-overview.html">Pillow</a></li>
-                </ul>
+              <div class="overflow-hidden col col-lg-3" data-zanim-timeline="{}">
+                <div class="mt-3 mb-0 text-white fs-3 fs-lg-4 fw-bold mt-lg-5 lh-xs"
+                  data-zanim-xs="{&quot;delay&quot;:0.1}" data-countup="{&quot;endValue&quot;:100}"
+                  style="transform: translate(0px, 0px); opacity: 1;">100</div>
+                <h6 class="text-white fs-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                  style="transform: translate(0px, 0px); opacity: 1;">Satisfied Clients</h6>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div><!-- end of .container-->
+    </section><!-- <section> close ============================-->
+    <!-- ============================================-->
 
-      <!-- /Menu  -->
-      <!-- /Nav bar -->
 
-      <!-- BG Image  -->
 
-      <div class="relative">
-        <img class="w-full object-cover brightness-50 filter lg:h-[500px]" src="./assets/images/about-us-bg.jpeg"
-          alt="Iphone with Macbook image" />
-
-        <div
-          class="absolute top-1/2 left-1/2 mx-auto flex w-11/12 max-w-[1200px] -translate-x-1/2 -translate-y-1/2 flex-col text-center text-white lg:ml-5">
-          <h1 class="text-4xl font-bold sm:text-5xl">About Us</h1>
-          <p class="pt-3 mx-auto text-xs lg:w-3/5 lg:pt-5 lg:text-base">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consequatur aperiam natus, nulla, obcaecati nesciunt, itaque
-            adipisci earum ducimus pariatur eaque labore.
-          </p>
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section>
+      <div class="container">
+        <div class="mb-5 text-center">
+          <h3 class="fs-2 fs-md-3">Global leadership</h3>
+          <hr class="short"
+            data-zanim-xs="{&quot;from&quot;:{&quot;opacity&quot;:0,&quot;width&quot;:0},&quot;to&quot;:{&quot;opacity&quot;:1,&quot;width&quot;:&quot;4.20873rem&quot;},&quot;duration&quot;:0.8}"
+            style="width: 4.2087rem; opacity: 1;">
         </div>
-      </div>
-
-      <!-- /BG IMAGE  -->
-    </div>
-
-    <section class="flex-grow">
-      <div class="flex flex-col gap-3 mt-6">
-        <img class="mx-auto w-[200px]" src="./assets/images/company-logo.svg" alt="Maybell Logo" />
-        <p class="text-sm text-center">Since 1999</p>
-      </div>
-
-      <div class="mx-auto my-10 flex max-w-[600px] flex-col items-center justify-center px-5">
-        <h2 class="w-full text-xl font-bold text-left">Our Mission:</h2>
-        <p class="py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-          placeat odit, est eum dolorem esse totam iusto necessitatibus
-          eligendi illo doloribus vero aperiam atque tempora repudiandae
-          molestiae nemo distinctio quisquam!
-        </p>
-        <div class="grid grid-cols-1 gap-3 lg:grid-cols-3">
-          <img class="object-cover" src="./assets/images/mission-family.jpg" alt="Family in living room" />
-          <img class="object-cover" src="./assets/images/mission-interior.jpg" alt="Interior" />
-          <img class="object-cover" src="./assets/images/mission-materials.jpg" alt="Materials" />
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 ">
+            <div class="card h-100"><img class="card-img-top" src="./images/portrait-3.jpg" alt="Reenal Scott">
+              <div class="card-body" data-zanim-timeline="{}">
+                <div class="overflow-hidden">
+                  <h5 data-zanim-xs="{&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">Reenal
+                    Scott</h5>
+                </div>
+                <div class="overflow-hidden">
+                  <h6 class="fw-normal text-500" data-zanim-xs="{&quot;delay&quot;:0.1}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Advertising Consultant</h6>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="py-3 mb-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Reenal Scott is the Founder and CEO of Elixir,
+                    which he started from his dorm room in 2013 with 3 people only.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 col-sm-6 col-lg-4 mt-sm-0 ">
+            <div class="card h-100"><img class="card-img-top" src="./images/portrait-4.jpg" alt="Lily Anderson">
+              <div class="card-body" data-zanim-timeline="{}">
+                <div class="overflow-hidden">
+                  <h5 data-zanim-xs="{&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">Lily
+                    Anderson</h5>
+                </div>
+                <div class="overflow-hidden">
+                  <h6 class="fw-normal text-500" data-zanim-xs="{&quot;delay&quot;:0.1}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Activation Consultant</h6>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="py-3 mb-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Lily leads Elixir UK and oversees the company’s
+                    Customer Operations teams supporting millions ofr users.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 col-sm-6 col-lg-4 mt-lg-0 ">
+            <div class="card h-100"><img class="card-img-top" src="./images/portrait-5.jpg" alt="Thomas Anderson">
+              <div class="card-body" data-zanim-timeline="{}">
+                <div class="overflow-hidden">
+                  <h5 data-zanim-xs="{&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">Thomas
+                    Anderson</h5>
+                </div>
+                <div class="overflow-hidden">
+                  <h6 class="fw-normal text-500" data-zanim-xs="{&quot;delay&quot;:0.1}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Change Management Consultant</h6>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="py-3 mb-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                    style="transform: translate(0px, 0px); opacity: 1;">As the VP of People, Thomas’s focus lies in the
+                    development and optimization of talent retention.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 col-sm-6 col-lg-4 ">
+            <div class="card h-100"><img class="card-img-top" src="./images/portrait-6.jpg" alt="Legartha Mantana">
+              <div class="card-body" data-zanim-timeline="{}">
+                <div class="overflow-hidden">
+                  <h5 data-zanim-xs="{&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">Legartha
+                    Mantana</h5>
+                </div>
+                <div class="overflow-hidden">
+                  <h6 class="fw-normal text-500" data-zanim-xs="{&quot;delay&quot;:0.1}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Brand Management Consultant</h6>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="py-3 mb-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                    style="transform: translate(0px, 0px); opacity: 1;">As General Counsel of Elixir, Tony oversees
+                    global
+                    legal activities and policies across all aspects.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 col-sm-6 col-lg-4 ">
+            <div class="card h-100"><img class="card-img-top" src="./images/portrait-7.jpg" alt="John Snow">
+              <div class="card-body" data-zanim-timeline="{}">
+                <div class="overflow-hidden">
+                  <h5 data-zanim-xs="{&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">John
+                    Snow
+                  </h5>
+                </div>
+                <div class="overflow-hidden">
+                  <h6 class="fw-normal text-500" data-zanim-xs="{&quot;delay&quot;:0.1}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Business Analyst</h6>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="py-3 mb-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                    style="transform: translate(0px, 0px); opacity: 1;">John has overseen the meteoric growth while
+                    protecting scaling its uniquely creative and culture.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 col-sm-6 col-lg-4 ">
+            <div class="card h-100"><img class="card-img-top" src="./images/portrait-1.jpg" alt="Ragner Lothbrok">
+              <div class="card-body" data-zanim-timeline="{}">
+                <div class="overflow-hidden">
+                  <h5 data-zanim-xs="{&quot;delay&quot;:0}" style="transform: translate(0px, 0px); opacity: 1;">Ragner
+                    Lothbrok</h5>
+                </div>
+                <div class="overflow-hidden">
+                  <h6 class="fw-normal text-500" data-zanim-xs="{&quot;delay&quot;:0.1}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Business Consultant</h6>
+                </div>
+                <div class="overflow-hidden">
+                  <p class="py-3 mb-0" data-zanim-xs="{&quot;delay&quot;:0.2}"
+                    style="transform: translate(0px, 0px); opacity: 1;">Ragner, SVP of Engineering, oversees Elixir’s
+                    vast
+                    engineering organization which drives the core programming.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-          placeat odit, est eum dolorem esse totam iusto necessitatibus
-          eligendi illo doloribus vero aperiam atque tempora repudiandae
-          molestiae nemo distinctio quisquam!
-        </p>
+      </div><!-- end of .container-->
+    </section><!-- <section> close ============================-->
+    <!-- ============================================-->
 
-        <h2 class="w-full mt-3 text-xl font-bold text-left">Our Vision:</h2>
-        <p class="py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-          placeat odit, est eum dolorem esse totam iusto necessitatibus
-          eligendi illo doloribus vero aperiam atque tempora repudiandae
-          molestiae nemo distinctio quisquam!
-        </p>
 
-        <h2 class="w-full mt-3 text-xl font-bold text-left">Our Values:</h2>
-        <p class="py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-          placeat odit, est eum dolorem esse totam iusto necessitatibus
-          eligendi illo doloribus vero aperiam atque tempora repudiandae
-          molestiae nemo distinctio quisquam!
-        </p>
-        <div class="grid grid-cols-1 gap-3 lg:grid-cols-3">
-          <img class="object-cover" src="./assets/images/mission-family.jpg" alt="Family in living room" />
-          <img class="object-cover" src="./assets/images/mission-interior.jpg" alt="Interior" />
-          <img class="object-cover" src="./assets/images/mission-materials.jpg" alt="Materials" />
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-6 text-center bg-primary text-md-start">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md">
+            <h4 class="mb-0 text-white">If you have any query related investment... <br class="d-md-none">we are
+              available
+              24/7</h4>
+          </div>
+          <div class="mt-4 col-md-auto mt-md-0"><a class="btn btn-light rounded-pill" href="../contact.html">Contact
+              Us</a></div>
         </div>
-      </div>
-    </section>
+      </div><!-- end of .container-->
+    </section><!-- <section> close ============================-->
+    <!-- ============================================-->
 
-    <!-- Desktop Footer  -->
-
-    <footer class="mx-auto w-full max-w-[1200px] justify-between pb-10 flex flex-col lg:flex-row">
-      <div class="ml-5">
-        <img class="mt-10 mb-5" src="./assets/images/company-logo.svg" alt="company logo" />
-        <p class="pl-0">
-          Lorem ipsum dolor sit amet consectetur <br />
-          adipisicing elit.
-        </p>
-        <div class="flex gap-3 mt-10">
-          <a href="https://github.com/bbulakh">
-            <img class="w-5 h-5 cursor-pointer" src="./assets/images/github.svg" alt="github icon" />
-          </a>
-          <a href="https://t.me/b_bulakh">
-            <img class="w-5 h-5 cursor-pointer" src="./assets/images/telegram.svg" alt="telegram icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/bogdan-bulakh-393284190/">
-            <img class="w-5 h-5 cursor-pointer" src="./assets/images/linkedin.svg" alt="twitter icon" />
-          </a>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
-        <div class="mx-5 mt-10">
-          <p class="font-medium text-gray-500">FEATURES</p>
-          <ul class="text-sm leading-8">
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Commerce</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Merchendise</a></li>
-          </ul>
-        </div>
-
-        <div class="mx-5 mt-10">
-          <p class="font-medium text-gray-500">SUPPORT</p>
-          <ul class="text-sm leading-8">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Docs</a></li>
-            <li><a href="#">Audition</a></li>
-            <li><a href="#">Art Status</a></li>
-          </ul>
-        </div>
-
-        <div class="mx-5 mt-10">
-          <p class="font-medium text-gray-500">DOCUMENTS</p>
-          <ul class="text-sm leading-8">
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Conditions</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">License</a></li>
-          </ul>
-        </div>
-
-        <div class="mx-5 mt-10">
-          <p class="font-medium text-gray-500">DELIVERY</p>
-          <ul class="text-sm leading-8">
-            <li><a href="#">List of countries</a></li>
-            <li><a href="#">Special information</a></li>
-            <li><a href="#">Restrictions</a></li>
-            <li><a href="#">Payment</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <!-- /Desktop Footer  -->
-
-    <!-- Payment and copyright  -->
-
-    <section class="h-11 bg-amber-400">
-      <div class="mx-auto flex max-w-[1200px] items-center justify-between px-4 pt-2">
-        <p>&copy; Bogdan Bulakh, 2023</p>
-        <div class="flex items-center space-x-3">
-          <img class="h-8" src="https://cdn-icons-png.flaticon.com/512/5968/5968299.png" alt="Visa icon" />
-          <img class="h-8" src="https://cdn-icons-png.flaticon.com/512/349/349228.png" alt="AE icon" />
-          <img class="h-8" src="https://cdn-icons-png.flaticon.com/512/5968/5968144.png" alt="Apple pay icon" />
-        </div>
-      </div>
-    </section>
   </main>
-  <!-- /Payment and copyright  -->
-  <script type="module" src="./assets/js/script.js"></script>
+
+
+  <!--===============================================-->
+
+
+
+  <section style="background-color: #3D4C6F">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5 text-white bg-primary p-lg-6 rounded-3">
+            <h4 class="mb-1 text-white fs-1 fs-lg-2">Sign up for email alerts</h4>
+            <p class="text-white">Stay current with our latest insights</p>
+            <form class="mt-4">
+              <div class="row align-items-center">
+                <div class="col-md-7 pe-md-0">
+                  <div class="input-group"><input class="form-control" type="email" placeholder="Enter Email Here">
+                  </div>
+                </div>
+                <div class="mt-3 col-md-5 mt-md-0">
+                  <div class="d-grid"><button class="btn btn-warning" type="submit"><span
+                        class="text-primary fw-semi-bold">Submit</span></button></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="mt-4 col-lg-6 mt-lg-0">
+          <div class="row">
+            <div class="text-white col-6 col-lg-4 ms-lg-auto">
+              <ul class="list-unstyled">
+                <li class="mb-3"><a class="text-white" href="./contact-us.html">Contact Us</a></li>
+                <li class="mb-3"><a class="text-white" href="#!">FAQ</a></li>
+                <li class="mb-3"><a class="text-white" href="#!">Privacy Policy</a></li>
+                <li class="mb-3"><a class="text-white" href="#!">Terms of Use</a></li>
+                <li class="mb-3"><a class="text-white" href="#!">Global Office</a></li>
+                <li class="mb-3"><a class="text-white" href="#!">Local Office</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-sm-5 ms-sm-auto">
+              <ul class="list-unstyled">
+                <li class="mb-3"><a class="text-decoration-none d-flex align-items-center" href="#!"> <span
+                      class="brand-icon me-3"><span class="fab fa-linkedin-in"></span></span>
+                    <h5 class="mb-0 text-white fs-0 d-inline-block">Linkedin</h5>
+                  </a></li>
+                <li class="mb-3"><a class="text-decoration-none d-flex align-items-center" href="#!"> <span
+                      class="brand-icon me-3"><span class="fab fa-twitter"></span></span>
+                    <h5 class="mb-0 text-white fs-0 d-inline-block">Twitter</h5>
+                  </a></li>
+                <li class="mb-3"><a class="text-decoration-none d-flex align-items-center" href="#!"> <span
+                      class="brand-icon me-3"><span class="fab fa-facebook-f"></span></span>
+                    <h5 class="mb-0 text-white fs-0 d-inline-block">Facebook</h5>
+                  </a></li>
+                <li class="mb-3"><a class="text-decoration-none d-flex align-items-center" href="#!"> <span
+                      class="brand-icon me-3"><span class="fab fa-google-plus-g"></span></span>
+                    <h5 class="mb-0 text-white fs-0 d-inline-block">Google+</h5>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- end of .container-->
+  </section><!-- <section> close ============================-->
+  <!-- ============================================-->
+
+  <footer class="py-4 text-center footer bg-primary">
+    <div class="container">
+      <div class="text-white row align-items-center opacity-85">
+        <div class="col-sm-3 text-sm-start"><a href="./index.html"><img src="images/logo-light.png" alt="logo"></a>
+        </div>
+        <div class="mt-3 col-sm-6 mt-sm-0">
+          <p class="mb-0 lh-lg fw-semi-bold">�MGH 2025© All Rights Reserved.</p>
+        </div>
+        <div class="mt-3 col text-sm-end mt-sm-0"><span class="fw-semi-bold">Designed by Asghar Ali</span><a
+            class="text-white" href="#" target="_blank"></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===============================================-->
+  <!--    JavaScripts-->
+  <!-- ===============================================-->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/is.min.js"></script>
+  <script src="js/BigPicture.js"> </script>
+  <script src="js/countUp.umd.js"> </script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/lodash.min.js"></script>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/customEase.js"></script>
+  <script src="js/theme.js"></script>
+
+
 </body>
 
 </html>
